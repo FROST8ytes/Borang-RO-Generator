@@ -61,13 +61,17 @@ def main():
     for sheet in sheets_to_read:
         parse_data(excel_file, sheet)
         print(f"[*] Creating folder {sheet}...")
-        os.mkdir(sheet)
-        print(f"[+] Folder {sheet} created successfully!")
+        try:
+            os.mkdir(sheet)
+            print(f"[+] Folder {sheet} created successfully!")
+        except FileExistsError:
+            print(f"[-] Folder {sheet} exists.")
 
     for i in range(len(names)):
         days_since_first_quarantined = todays_date - datetime.strptime(date_hsos[i], "%d/%m/%Y")
         if days_since_first_quarantined >= timedelta(days=quarantine_days_required):
-            generate_docx(f"{os.getcwd()}/{sheets_to_read[source_sheet[i]]}/{i:02}-Borang_RO-{names[i]}.docx",
+            generate_docx(f"{os.getcwd()}/{sheets_to_read[source_sheet[i]]}/"
+                          f"{i:02}-Borang_RO-{names[i].replace('/', '')}.docx",
                           names[i], identifications[i], addresses[i], phone_numbers[i], date_hsos[i], date_ros[i])
 
 
@@ -92,6 +96,8 @@ def parse_data(excel_file: openpyxl.Workbook, sheet_name: str) -> None:
         source_sheet.append(sheets_to_read.index(sheet_name))
 
         name = sheet['B' + str(row)].value
+        if name is None:
+            break
         names.append(name)
         print(f"Adding name: {name} from sheet {sheet_name} to record")
 
