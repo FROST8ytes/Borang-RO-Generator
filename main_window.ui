@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>792</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Cipta Borang RO</string>
+  </property>
+  <property name="locale">
+   <locale language="Malay" country="Malaysia"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>771</width>
+      <height>551</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="grid_layout">
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="spacing">
+      <number>10</number>
+     </property>
+     <item row="2" column="2" rowspan="2">
+      <widget class="QPushButton" name="button_choose_excel">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>Pilih Excel</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0" colspan="2">
+      <widget class="QPlainTextEdit" name="text_excel_path"/>
+     </item>
+     <item row="5" column="2">
+      <widget class="QPushButton" name="button_start_stop">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>Cipta Borang</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0" colspan="2">
+      <widget class="QPlainTextEdit" name="text_template_path"/>
+     </item>
+     <item row="1" column="2">
+      <widget class="QPushButton" name="button_choose_template">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="text">
+        <string>Pilih Templat</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0" colspan="3">
+      <widget class="QGraphicsView" name="logo"/>
+     </item>
+     <item row="5" column="0" colspan="2">
+      <widget class="QProgressBar" name="generate_progress">
+       <property name="value">
+        <number>24</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0" colspan="2">
+      <widget class="QListView" name="view_sheets">
+       <property name="showDropIndicator" stdset="0">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>792</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_menu">
+    <property name="title">
+     <string>Menu</string>
+    </property>
+    <addaction name="action_import"/>
+    <addaction name="action_save"/>
+    <addaction name="action_reset"/>
+    <addaction name="separator"/>
+    <addaction name="action_restart"/>
+    <addaction name="action_quit"/>
+   </widget>
+   <widget class="QMenu" name="menu_help">
+    <property name="title">
+     <string>Bantu</string>
+    </property>
+    <addaction name="action_documentation"/>
+    <addaction name="action_credits"/>
+   </widget>
+   <addaction name="menu_menu"/>
+   <addaction name="menu_help"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="action_reset">
+   <property name="text">
+    <string>Mula Semula</string>
+   </property>
+  </action>
+  <action name="action_import">
+   <property name="text">
+    <string>Import Pilihan</string>
+   </property>
+  </action>
+  <action name="action_restart">
+   <property name="text">
+    <string>Lancar Semula</string>
+   </property>
+  </action>
+  <action name="action_quit">
+   <property name="text">
+    <string>Keluar</string>
+   </property>
+  </action>
+  <action name="action_documentation">
+   <property name="text">
+    <string>Dokumentasi</string>
+   </property>
+  </action>
+  <action name="action_credits">
+   <property name="text">
+    <string>Kredit</string>
+   </property>
+  </action>
+  <action name="action_save">
+   <property name="text">
+    <string>Simpan Pilihan</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
