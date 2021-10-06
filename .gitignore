@@ -148,3 +148,6 @@ AYAMADU & FY 16 SEPT
 YOONSTEEL
 test.py
 *.xlsx
+
+# Not ignoring these files...
+!SAMPLE_EXCEL.xlsx
