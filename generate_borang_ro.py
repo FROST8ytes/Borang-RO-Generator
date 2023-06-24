@@ -3,7 +3,7 @@
 """
 This script automates the creation of Borang RO for quarantined patients of Malaysia.
 It is licensed under GNU GPLv3. If possible, only modify the modifiable global variables.
-I am not responsible of anything that happens to your machine if the script breaks something,
+I am not responsible for anything that happens to your machine if the script breaks something,
 especially when you modify something that you shouldn't.
 """
 __author__ = "Ammar Farhan Mohamad Rizam"
